@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  background: #0d1012;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #18191a;
+  --main-color: #00f7ff;
+}
+
+/* Set up the 3D perspective for the scene */
+.scene {
+  position: relative;
+  perspective: 2000px;
+  width: 500px;
+  height: 400px;
+}
+
+/* Create cube */
+.cube {
+  position: relative;
+  transition: transform 1.5s ease;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  background: var(--bg-color);
+  border-radius: 0.1rem;
+}
+
+.face > div {
+  margin: 30px;
+}
+
+.face > div div {
+  margin: 20px 0;
+}
+
+.face div h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 550;
+}
+
+form div {
+  position: relative;
+}
+
+form input[type="password"],
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid var(--main-color);
+  outline: none;
+  text-indent: 2.3rem;
+  border-radius: 3px;
+  color: var(--main-color);
+}
+
+form input::placeholder {
+  color: var(--main-color);
+}
+
+form div i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--main-color);
+  font-size: 22px;
+}
+
+.custom-checkbox {
+  color: var(--main-color);
+  font-weight: 200;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkbox {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--main-color);
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+  vertical-align: middle;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox {
+  background: var(--main-color);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  width: 2px;
+  height: 7px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+form button {
+  width: 100%;
+  background: var(--main-color);
+  padding: 13px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: #18191a;
+}
+
+.form-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-end a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.front {
+  transform: translateZ(250px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(250px);
+}

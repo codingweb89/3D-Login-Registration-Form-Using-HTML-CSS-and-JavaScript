@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Login & Registration Form Using HTML CSS and JavaScript</title>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="cube">
+        <div class="face front">
+          <div>
+            <h2>Login Form</h2>
+            <form>
+              <div>
+                <input type="email" placeholder="Email Address" />
+                <i class="bx bxs-envelope"></i>
+              </div>
+              <div>
+                <input type="password" placeholder="Password" />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+              <div>
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkbox"></span>
+                  Remember Password
+                </label>
+              </div>
+              <div>
+                <button>Login Now</button>
+              </div>
+            </form>
+            <div class="form-end">
+              <a href="#" id="register">Don't have an account? Sign up</a>
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+        <div class="face left">
+          <div>
+            <h2>Registeration Form</h2>
+            <form>
+              <div>
+                <input type="text" placeholder="Username" />
+                <i class="bx bxs-user"></i>
+              </div>
+              <div>
+                <input type="email" placeholder="Email Address" />
+                <i class="bx bxs-envelope"></i>
+              </div>
+              <div>
+                <input type="password" placeholder="Password" />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+              <div>
+                <button>Register Now</button>
+              </div>
+            </form>
+            <div class="form-end">
+              <a href="#" id="login">Already had an account? Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
